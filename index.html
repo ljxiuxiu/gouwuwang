@@ -1,0 +1,498 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>购物网</title>
+<style>
+	*{
+		padding:0px;
+		margin:0px auto;
+		font-style:normal;
+	}
+	
+	a{
+		text-decoration:none;
+	}
+	li{
+		list-style:none;
+	}
+	
+	#header {
+		width:962px;
+		height:53px;
+		background-color:#F4D8F1;
+		
+	}
+	
+	#header i{
+		width:942px;
+		height:43px;
+		background-color:#C82C75;
+		display:inline-block;
+		margin-top:10px;
+		margin-left:10px;
+	}
+	#header i ul{
+		float:left;
+		margin-left:30px;
+	}
+	#header i ul li{
+		float:left;
+		margin:7px 10px 0px 0px;
+	}
+	
+	#header i p{
+		float:right;
+		margin:10px 30px 0px 0px;
+		color:#fff;
+	}
+	#header i p a{
+		color:#FF9CCF;
+		text-decoration:underline;
+	}
+	#second {
+		width:962px;
+		height:352px;
+		background-color:#F4D8F1;
+	}
+	#second i{
+		width:942px;
+		height:352px;
+		display:inline-block;
+		margin-left:10px;
+	}
+	#second i .s_top{	
+		width:942px;
+		height:100px;
+		float:left;
+		background-color:#EBBCE6;
+	}
+	
+	#second i .s_top img{
+		float:left;
+		margin:10px 0px 0px 30px;
+	}
+	#second i .s_top .img2{
+		float:right;
+		margin-top:0px;	
+	}
+	
+	#second i .s_bottom{
+		width:942px;
+		height:252px;
+		float:left;
+		background-color:#fff;		
+	}
+	#second i .s_bottom img{
+		margin:10px 0px 0px 30px;
+	}
+	#second i .s_bottom .img2{
+		float:right;
+		margin:0px 0px 0px 0px;	
+	}
+	
+	#nav{
+		width:962px;
+		height:40px;
+		background-color:#F4D8F1;
+	}
+	#nav i{
+		width:942px;
+		height:40px;
+		background-color:#F4D8F1;
+		display:inline-block;
+		margin-left:10px;
+	}
+	#nav i ul{
+		width:942px;
+		height:40px;
+		background:url(images/3.png) repeat;
+		float:left;	
+	}
+	#nav i ul a li{
+		width:150px;
+		height:30px;
+		line-height:30px;
+		text-align:center;
+		margin-top:5px;
+		border-right:1px solid #653231;
+		color:white;
+		float:left;
+		font-size:14px;
+	}
+	#nav i ul a .l1{
+		margin-left:30px;
+	}
+	
+	
+	
+	#content{
+		width:962px;
+		height:655px;
+		background-color:#F4D8F1;
+	}
+	#content i{
+		width:942px;
+		height:655px;
+		background-color:#811044;
+		display:inline-block;
+		margin-left:10px;
+	}
+	#content i .left{
+		width:660px;
+		height:655px;
+		float:left;
+	}
+	#content i .left .l_top{
+		width:660px;
+		height:245px;
+	}
+	#content i .left .l_top dl{
+		width:625px;
+		height:245px;
+		color:white;
+		font-size:14px;
+		text-align:justify;
+		margin-left:30px;
+		padding-top:35px;
+	}
+	#content i .left .l_top dt{
+		font-size:24px;
+	}
+	#content i .left .l_top dd{
+		margin-top:20px;
+	}
+	#content i .left .l_top a{
+		color:#F08DB6;
+		text-decoration:underline;
+	}
+	#content i .left .l_top p{
+		width:607px;
+		height:40px;
+		font-size:24px;
+		line-height:40px;
+		color:#fff;
+		float:left;
+		margin-left:30px;
+		padding-left:17px;
+		background-color:#440522;
+	}
+	#content i .left .l_bottom dl{
+		float:left;
+		margin-left:0px;
+	}
+	#content i .left .l_bottom .dl1{
+		float:left;
+		margin-left:20px;
+	}
+	#content i .left .l_bottom dt img{
+		width:198px;
+		height:130px;
+		margin:10px 0px 0px 10px;
+	}
+	#content i .left .l_bottom dd{
+		width:198px;
+		height:40px;
+		color:#fff;
+		text-align:justify;
+		font-size:13px;
+		margin-right:0px;
+	}
+	#content i .left .l_bottom p{
+		color:#fff;
+		margin-left:10px;
+	}
+	#content i .left .l_bottom .d1{
+		width:188px;
+		height:30px;
+		margin:20px 0px 0px 10px;
+		padding-left:10px;
+		background-color:#BE457B;
+		color:#fff;
+		font-size:16px;
+		line-height:30px;
+	}
+	
+	#content i .left .l_bottom  input{
+		width:70px;
+		height:20px;
+		display:inline-block;
+		background-color:#C3437C;
+		color:#fff;
+		font-size:14px;
+		margin:10px 0px 0px 10px;
+		padding-left:8px;
+		float:left;
+		border-style:none;
+		border-bottom:1px solid #F583B7;
+	}
+	
+	#content i .l_bottom .a1{
+		float:left;
+		margin:10px 0px 0px 18px;
+		font-size:14px;
+		text-decoration:underline;
+		color:#FF9ECD;
+	}
+	#content i .right{
+		width:280px;
+		height:655px;
+		float:right;
+	}
+	#content i .r_top{
+		float:right;
+		width:255px;
+		height:150px;
+		background-color:#EBBCE6;
+	}
+	#content i .right .r_top{
+		width:222px;
+		height:133px;
+		margin:34px 34px 0px 0px;
+	}
+	#content i .right .r_top h1{
+		width:70px;
+		height:20px;
+		font-size:14px;
+		background-color:#DBD8DA;
+		border:1px solid #AB97AD;
+		border-radius:2px;
+		display:inline-block;
+		line-height:20px;
+		text-align:center;
+		margin:20px 0px 0px 20px;
+		
+	}
+	#content i .right .r_top p{
+		width:196px;
+		height:26px;
+		color:#fff;
+		background-color:#BE457B;
+		margin-top:6px;
+		padding-left:14px;
+	}
+	#content i .right .r_top input{
+		margin:20px 0px 0px 20px;
+	}
+	#content i .right .r_top .sub{
+		width:68px;
+		height:20px;
+		border-radius:3px;
+		border:1px solid #786B75;
+		background:url(images/6.png);
+	}
+	#content i .right .r_center {
+		width:222px;
+		height:278px;
+		margin:30px 34px 0px 0px;
+		background-color:#EBBCE6;
+		float:right;
+	}
+	#content i .right .r_center p{
+		width:196px;
+		height:26px;
+		color:#fff;
+		background-color:#BE457B;
+		margin-top:6px;
+		padding-left:14px;
+	}
+	#content i .right .r_center ul{
+		margin:20px 0px 0px 20px;
+	}
+	#content i .right .r_center ul a li{
+		color:#A45688;
+		font-size:12px;
+		margin-top:5px;
+	}
+	#content  i .right .r_bottom {
+		width:222px;
+		height:120px;
+		margin:30px 34px 0px 0px;
+		background-color:#EBBCE6;
+		float:right;
+	}
+	#content i .right .r_bottom p{
+		width:196px;
+		height:26px;
+		color:#fff;
+		background-color:#BE457B;
+		margin-top:6px;
+		padding-left:14px;
+	}
+	#content i .right .r_bottom img{
+		margin:28px 0px 0px 5px;
+		float:left;
+	}
+	#content i .right .r_bottom .img{
+		margin-left:20px;
+	}
+	#footer{
+		width:962px;
+		height:72px;
+		background-color:#F4D8F1;
+
+	}
+	#footer i{
+		width:942px;
+		height:72px;
+		background-color:#333333;
+		display:inline-block;
+		margin-left:10px;
+	}
+	#footer i ul{
+		margin:18px 0px 0px 20px;
+		float:left;
+	}
+	#footer i ul li{
+		margin-right:5px;		
+		float:left;
+	}
+	#footer i .img2{
+		width:1px;
+		height:45px;
+		float:left;
+		margin:15px 0px 0px 35px;
+	}
+	#footer i p{
+		color:#fff;
+		font-size:14px;
+		margin:18px 0px 0px 50px;
+		float:left;
+	}
+	#footer i a{
+		color:#D9B1CB;
+		text-decoration:underline;
+		
+	}
+</style>
+</head>
+
+<body>
+
+<div id="header">
+  	<i>
+	<ul>
+    	<li><img src="images/templatemo_flag_01.gif" /></li>
+        <li><img src="images/templatemo_flag_02.gif" /></li>
+        <li><img src="images/templatemo_flag_03.gif" /></li>
+        <li><img src="images/templatemo_flag_04.gif" /></li>
+        <li><img src="images/templatemo_flag_05.gif" /></li>
+    </ul>   
+    <p>Shopping Cart(<a href="">3 items</a>)</p> 
+    </i>
+</div>
+
+<div id="second">
+	<i>
+	<div class="s_top">
+    	<img src="images/templatemo_site_header.jpg" />
+        <img class="img2" src="images/templatemo_header_bg.jpg" />
+    </div>
+    <div class="s_bottom">
+    	<img src="images/templatemo_banner_image.jpg" />
+        <img class="img2" src="images/templatemo_banner_bg.jpg" />
+    </div>
+    </i>
+</div>
+
+<div id="nav">
+	<i>
+	<ul>
+    	<a href=""><li class="l1">Home</li></a>
+        <a href=""><li>Features</li></a>
+        <a href=""><li>Gallery</li></a>
+        <a href=""><li>Forum</li></a>
+        <a href=""><li>About Us</li></a>
+        <a href=""><li >Contact Us</li></a>
+    </ul> 
+    </i>
+</div>
+
+<div id="content">
+	<i>
+	<div class="left">
+ 	<div class="l_top">
+	<dl>
+    	<dt>Welcome to Our Flower Site</dt>
+        <dd>This is a <a href="">free CSS template</a> provided by TemplateMo.com website. You may download,modify and apply this CSS layout for your personal or business websites.Credit goes to <a href="">PublicDomainPictures</a> for photos.</dd>
+        <dd>Aliquam tristique lacus in sapien.Suspendisse potenti.Ut sed pede.Nullam vitae tellus. Sed ultrices.Lorem ipsum dolor sit amet,consectetuer adipidcing elit.Nunc quis sem nec tellus blandit tincidunt.Aliquam tristique lacus in sapien.Suspendisse potenti.Ut sed pede.Nullam vitae tellus.Sed ultrices.Lorem ipsum dolor sit amet,consectetuer adipiscing elit.</dd>
+    </dl>
+    <p>New Products</p>
+    </div>
+    <div class="l_bottom">
+    	<dl class="dl1">
+        	<dd class="d1">Product One</dd>
+        	<dt><img src="images/templatemo_image_01.jpg" /></dt>
+            <dd>Aliquam trique lacus in sapien.Suspendisse potenti.</dd>
+            <p>PRICE:$14.00</p>
+            <input type="submit" name="submit" value="Buy Now" />
+            <a class="a1" href="">Details</a>
+        </dl>
+        <dl>
+        	<dd class="d1">Product Title</dd>
+        	<dt><img src="images/templatemo_image_02.jpg" /></dt>
+            <dd>Lorem ipsum dolor sit amet,consectetuer adipidcing.</dd>
+            <p>PRICE:$18.00</p>
+            <input type="submit" name="submit" value="Buy Now" />
+            <a class="a1" href="">Details</a>
+        </dl>
+        <dl>
+        	<dd class="d1">Product Title</dd>
+        	<dt><img src="images/templatemo_image_03.jpg" /></dt>
+            <dd>Suspendisse potenti. Ut sed pede.Nullam vitae tellus.</dd>
+            <p>PRICE:$26.00</p>
+            <input type="submit" name="submit" value="Buy Now" /> 
+            <a class="a1" href="">Details</a>
+        </dl>
+    </div>
+    </div>
+    <div class="right">
+    <div class="r_top">
+    	<form method="get" action="">
+        	<p>Search</p>
+            <input type="text"  name="text"/>
+            <input class="sub" type="submit"  name="submit" value="Search"/>
+        </form>
+    </div>
+    <div class="r_center">
+    	<form method="get" action="">
+        <p>Categories</p>
+        <ul>
+        	<a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Artificial and Silk</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Dried and Presserved</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Floral</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Fresh Cut</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Gardens</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Gifts</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Nurseries</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Services</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Weddings</li></a>
+            <a href=""><li><img src="images/templatemo_list_icon.gif" /> &nbsp;Wholesale</li></a>
+        </ul>
+        </form>
+    </div>
+    <div class="r_bottom">
+    	<form method="get" action="">
+        	<p>W3C Validations</p>
+            <img class="img" src="images/2.png" />
+            <img src="images/5.png" />
+        </form>
+    </div>
+    </div>
+    </i>
+</div>
+
+<div id="footer">
+	<i>
+	<ul>
+    	<li><img src="images/mastercard.gif" /></li>
+        <li><img src="images/visa.gif" /></li>
+        <li><img src="images/paypal.gif" /></li>
+        <li><img src="images/verisignsecured.gif" /></li>
+    </ul>
+    <img class="img2" src="images/4.png" />
+    <p>Copyright &copy; 2024 <a href="">Your Company Name</a> | Designed by <a href="">久图网</a></p>
+    </i>
+</div>
+</body>
+</html>
